@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      background: #ff6f61;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      color: #fff;
+      animation: fadeIn 2s ease-in-out, bounce 1.5s infinite alternate;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0 0 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    /* Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 60px;
+      background: red;
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 10s infinite ease-in;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 40px;
+      background: #333;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 0.9; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    .b1 { left: 10%; background: #ff4d6d; animation-delay: 0s; }
+    .b2 { left: 30%; background: #f7b801; animation-delay: 2s; }
+    .b3 { left: 50%; background: #3ae374; animation-delay: 4s; }
+    .b4 { left: 70%; background: #17c0eb; animation-delay: 6s; }
+    .b5 { left: 90%; background: #9b59b6; animation-delay: 8s; }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday Sanaf! 🎂</h1>
+    <p>Wishing you a day filled with love, laughter, and cake!</p>
+  </div>
+
+  <!-- Balloons -->
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+  <div class="balloon b4"></div>
+  <div class="balloon b5"></div>
+</body>
+</html>
